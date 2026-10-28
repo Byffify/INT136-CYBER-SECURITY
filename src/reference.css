@@ -94,3 +94,21 @@ article[data-page="1"]>.scope{margin:44px 0 0;text-align:left}article[data-page=
 @keyframes deck-content-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.stage article>.slide-title,.theatre-layout>.slide-title,.scope-heading,.team-heading,.theatre-composition,.machine-layout,.compare,.chart,.layer-steps{animation:none}}
 .layout-7 .theatre-narration>div{height:134px}.layout-7 .theatre-composition{gap:12px}
+
+/* Evidence narrative: fixed stage, one finding per beat, one interpretation rail. */
+.result-scene{padding-top:22px}.finding-title{height:119px;display:flex;align-items:flex-start}
+.finding-title h1{font:500 60px/1.22 Poppins,Thai;letter-spacing:-.025em;margin:0;max-width:1380px;text-wrap:balance}
+.finding-body{display:grid;grid-template-columns:880px 1fr;gap:60px;align-items:center;min-height:435px}
+.finding-copy{padding:0;min-width:0}.finding-copy h2{font:500 33px/1.45 Poppins,Thai;margin:0 0 24px;text-wrap:balance}
+.finding-file{font:400 23px/1.6 Poppins,Thai;color:#d4bdc7;overflow-wrap:anywhere}
+.finding-metric{display:block;font:500 72px/1.1 Poppins;letter-spacing:-.035em;color:#fff;font-variant-numeric:tabular-nums}
+.scene-6 .finding-metric,.scene-7 .finding-metric{font-size:100px}.scene-5 .finding-metric{font-size:54px}
+.finding-unit{font:400 21px/1.5 Poppins,Thai;color:#ff9aaa;margin:16px 0 28px}.finding-detail{font:400 21px/1.6 Poppins,Thai;color:#e5d4dc;margin:0;overflow-wrap:anywhere}
+.finding-boundary{margin-top:20px;border-top:1px solid #ffffff20;min-height:65px;padding-top:18px}
+.finding-boundary p{font:400 18px/1.6 Poppins,Thai;color:#d4bdc7;margin:0;display:flex;gap:24px;align-items:baseline}
+.finding-boundary b{font-weight:500;color:#ffacb8;white-space:nowrap}
+.result-scene .real-caption p{font-size:15px}.result-scene .real-caption{height:36px}.result-scene .theatre-mode{font-size:14px;margin-bottom:12px}.result-scene .evidence-scene{display:block}
+.scene-6 .finding-body{grid-template-columns:460px 880px}.scene-6 .finding-copy{grid-column:1;grid-row:1}.scene-6 .protection-theatre{grid-column:2;grid-row:1}
+.narrative-glow{position:absolute;z-index:3;right:-200px;bottom:-400px;width:1200px;height:950px;pointer-events:none;background:radial-gradient(ellipse at center,#b41036 0%,#66152766 35%,transparent 68%);filter:blur(65px);will-change:transform,opacity}
+.finding-body{animation:deck-content-in .85s var(--deck-ease) .12s both}
+@media(prefers-reduced-motion:reduce){.finding-body{animation:none}.narrative-glow{will-change:auto}}
