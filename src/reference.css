@@ -65,3 +65,32 @@ main>nav>span{opacity:1;color:#a99ca3}
 .layer-light{position:absolute;top:-2px;left:0;width:56px;height:6px;border-radius:50%;background:linear-gradient(90deg,transparent,#ff7b91,#fff);box-shadow:5px 0 15px #ff5778,0 0 28px #f32651;animation:layer-travel .85s ease-out both}
 @keyframes layer-travel{0%{left:0;opacity:0;transform:translateX(-100%)}12%{opacity:1}85%{opacity:1}100%{left:100%;opacity:0;transform:translateX(-100%)}}
 @media(prefers-reduced-motion:reduce){.layer-link:before{transition:none}.layer-light{display:none}}
+
+/* U-Hackathon editorial rhythm: one heading rail, calm surfaces, grouped reveals. */
+:root{--deck-ease:cubic-bezier(.22,1,.36,1);--deck-copy:#e0ced5;--deck-muted:#bda5af}
+.stage{font-synthesis:none;-webkit-font-smoothing:antialiased}
+.stage article>.slide-title,.theatre-layout>.slide-title{font:500 62px/1.2 Poppins,Thai;letter-spacing:-.025em;text-align:left;margin:24px 0 42px;max-width:1300px}
+.theatre-layout>.slide-title{font-size:56px;margin-bottom:36px}
+.scope-editorial{display:grid;grid-template-columns:500px 1fr;gap:92px;align-items:center;min-height:435px;padding-top:30px}
+.scope-heading h1{font:500 68px/1.16 Poppins,Thai;margin:0 0 30px;text-align:left;letter-spacing:-.025em}
+.scope-heading>p{font:400 23px/1.65 Poppins,Thai;color:var(--deck-copy);margin:0}
+.scope-rows{border-top:1px solid #ffffff17}.scope-row{display:grid;grid-template-columns:155px 1fr;gap:32px;align-items:start;padding:36px 0;border-bottom:1px solid #ffffff17;min-height:120px}
+.scope-row h2{font:500 22px/1.5 Thai;color:#ffa3b1;margin:0}.scope-row p{font:400 26px/1.5 Poppins,Thai;color:white;margin:0}
+article[data-page="1"]>.scope{margin:44px 0 0;text-align:left}article[data-page="1"]>.bottom-note{text-align:left;margin:16px 0 0}
+.machine-layout{margin-top:0;gap:80px;align-items:center}.machine-layout>.evidence{padding:0;border-radius:12px;background:none}.machine-layout .evidence img{height:375px}
+.chart{margin-left:0;margin-right:0}.chart-labels{font-size:17px;color:var(--deck-muted);padding-bottom:20px}.chart-row h2{font-size:22px}.chart-row strong,.bar-cell b{font-variant-numeric:tabular-nums}.chart-row.active{background:linear-gradient(90deg,#da0e1512,transparent)}
+.compare{margin:0!important;gap:72px!important}.compare section{padding:12px 0!important}.compare section+section{padding-left:54px!important;border-left-color:#ffffff20!important}.compare h2{font-size:32px!important;margin:0 0 20px}.compare p{font-size:23px!important;margin:0;padding:18px 0;border-bottom:1px solid #ffffff12}.compare+.bottom-note{text-align:left;margin-top:28px}
+.theatre-narration h2{font-weight:500;letter-spacing:-.02em}.theatre-intro{color:var(--deck-copy);line-height:1.55}.theatre-file-caption{color:var(--deck-muted);font-family:Poppins,Thai;line-height:1.55}
+.real-canvas{border-radius:12px!important;box-shadow:none}.real-caption{height:38px}.real-caption p{font-size:14px;color:var(--deck-muted)}.theatre-mode{font-family:Poppins,Thai;color:var(--deck-muted);font-size:13px}.theatre-state{background:none;padding:0;color:var(--deck-muted)}
+.protection-theatre .evidence-rail{display:none}.real-expand{opacity:0;transition:opacity .2s}.real-canvas:hover .real-expand,.real-canvas:focus-visible .real-expand{opacity:1}
+.layout-4 .protection-theatre{border-top:0;padding-top:4px}.layout-5 .theatre-narration{border-left:0;padding-left:0}.layout-8 .story-fact{border:0;padding:14px 0}
+.layout-4 .theatre-narration>div,.layout-7 .theatre-narration>div{height:150px;align-items:start}.layout-4 .story-heading,.layout-7 .story-heading{padding-top:8px}
+.layout-4 .story-reading,.layout-7 .story-reading{padding-top:8px}.layout-4 .result-note,.layout-7 .result-note{font-size:17px}.layout-4 .story-limitation,.layout-7 .story-limitation{font-size:16px;line-height:1.5}
+.layout-5 .theatre-narration .result-note,.layout-8 .theatre-narration .result-note{font-size:18px;line-height:1.6}.layout-5 .story-limitation,.layout-8 .theatre-narration .story-limitation{font-size:17px;line-height:1.6}
+.layout-6 .theatre-narration .result-number{font-size:116px}.layout-7 .theatre-narration .result-number{font-size:84px}.story-fact .result-number{font-variant-numeric:tabular-nums;letter-spacing:-.035em}
+.stage article>.slide-title,.theatre-layout>.slide-title,.scope-heading,.team-heading{animation:deck-heading-in .7s var(--deck-ease) both}
+.theatre-composition,.machine-layout,.compare,.chart,.layer-steps{animation:deck-content-in .85s var(--deck-ease) .12s both}
+@keyframes deck-heading-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes deck-content-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.stage article>.slide-title,.theatre-layout>.slide-title,.scope-heading,.team-heading,.theatre-composition,.machine-layout,.compare,.chart,.layer-steps{animation:none}}
+.layout-7 .theatre-narration>div{height:134px}.layout-7 .theatre-composition{gap:12px}
